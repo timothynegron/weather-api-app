@@ -1,13 +1,22 @@
+// ┌────────────┐
+// │   Import   │	
+// └────────────┘
+
 import { config } from "./config.js";
 
-let p = document.querySelector("p");
-
+// ┌──────────────────┐
+// │   Main Program   │	
+// └──────────────────┘
 
 main();
 
 function main(){
     setEventListener();
 }
+
+// ┌───────────────┐
+// │   Functions   │	
+// └───────────────┘
 
 function setEventListener() {
     document.querySelector("button").addEventListener("click", search)
