@@ -1,3 +1,75 @@
+h1 {
+    font-size: 40pt;
+}
+
 body {
     font-family: 'News Cycle', sans-serif;
+    background-color: #faf3e0;
 }
+
+img {
+    width: 200px;
+}
+
+
+input {
+    margin-left: 1vh;
+    padding-left: 2vh;;
+    font-family: 'News Cycle', sans-serif;
+    font-size: 20pt;
+    border-radius: 10px;
+    border: none;
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12)
+}
+
+input:focus {
+    outline: none;
+}
+
+button {
+    font-family: 'News Cycle', sans-serif;
+    font-size: 20pt;
+    background-color: #eabf9f;
+    border-radius: 10px;
+    border: none;
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12)
+}
+
+button:focus {
+    outline: none;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+}
+
+
+#content-div {
+    height: 75%;
+    width: 40%;
+    background-color: #a1cae2;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 35px 20px #777;
+    -moz-box-shadow: 0 35px 20px #777;
+    box-shadow: 0 35px 20px #777;
+}
+
