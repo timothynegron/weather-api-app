@@ -20,6 +20,8 @@ function main(){
         setLocationName(data["name"])
         setWeatherDescription(data["weather"][0]["description"]);
         setTemperature(data["main"]["temp"]);
+        setHighTemperature(data["main"]["temp_max"]);
+        setLowTemperature(data["main"]["temp_min"]);
         setWeatherIcon(data["weather"][0]["icon"]);
     })
     .catch(err => alert("Wrong city name!"))
@@ -30,16 +32,18 @@ function main(){
 // └───────────────┘
 
 function setEventListener() {
-    document.querySelector("button").addEventListener("click", search)
+    document.querySelector("button").addEventListener("click", search);
 }
 
 function search(){
     fetch(config(document.querySelector("input").value))
     .then(response => response.json())
     .then(data => {
-        setLocationName(data["name"])
+        setLocationName(data["name"]);
         setWeatherDescription(data["weather"][0]["description"]);
         setTemperature(data["main"]["temp"]);
+        setHighTemperature(data["main"]["temp_max"]);
+        setLowTemperature(data["main"]["temp_min"]);
         setWeatherIcon(data["weather"][0]["icon"]);
     })
     .catch(err => alert("Wrong city name!"))
@@ -51,8 +55,8 @@ function setWeatherDescription(description){
     
 }
 
-function setWeatherIcon(code){
-    document.querySelector("img").src = "http://openweathermap.org/img/wn/" + code + "@4x.png";
+function setWeatherIcon(iconCode){
+    document.querySelector("img").src = `http://openweathermap.org/img/wn/${iconCode}@4x.png`;
 }
 
 function setLocationName(name){
@@ -60,9 +64,18 @@ function setLocationName(name){
 }
 
 function setTemperature(temp){
-    document.querySelector("#temperature").innerHTML = kelvinToFahrenheit(temp);
+    document.querySelector("#temperature").innerHTML = `${kelvinToFahrenheit(temp)}°F`;
+}
+
+function setHighTemperature(highTemp){
+    document.querySelector("#temperature-high").innerHTML = `H:${kelvinToFahrenheit(highTemp)}°`;
+}
+
+function setLowTemperature(lowTemp){
+    console.log(lowTemp);
+    document.querySelector("#temperature-low").innerHTML= `L:${kelvinToFahrenheit(lowTemp)}°`;
 }
 
 function kelvinToFahrenheit(kelvin){
-    return Math.ceil(((kelvin - 273.15) * 9/5 + 32)) + "°F";
+    return Math.ceil(((kelvin - 273.15) * 9/5 + 32));
 }
