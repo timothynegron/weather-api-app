@@ -4,14 +4,25 @@
 
 import { config } from "./config.js";
 
-// ┌──────────────────┐
-// │   Main Program   │	
-// └──────────────────┘
+// ┌───────────────────┐
+// │   Initial Set Up  │	
+// └───────────────────┘
 
 main();
 
 function main(){
+
     setEventListener();
+
+    fetch(config("New York"))
+    .then(response => response.json())
+    .then(data => {
+        setLocationName(data["name"])
+        setWeatherDescription(data["weather"][0]["description"]);
+        setTemperature(data["main"]["temp"]);
+        setWeatherIcon(data["weather"][0]["icon"]);
+    })
+    .catch(err => alert("Wrong city name!"))
 }
 
 // ┌───────────────┐
