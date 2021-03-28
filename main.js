@@ -56,7 +56,7 @@ function setWeatherIcon(code){
 }
 
 function setLocationName(name){
-    document.querySelector("#name").innerHTML = name;
+    document.querySelector("#location-name").innerHTML = name;
 }
 
 function setTemperature(temp){
@@ -64,6 +64,5 @@ function setTemperature(temp){
 }
 
 function kelvinToFahrenheit(kelvin){
-    return Math.ceil(((kelvin - 273.15) * 9/5 + 32)) + "&#176" + "F";
+    return Math.ceil(((kelvin - 273.15) * 9/5 + 32)) + "°F";
 }
-
