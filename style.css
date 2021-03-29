@@ -1,10 +1,11 @@
 h1 {
-    font-size: 20pt;
+    font-size: 28pt;
 }
 
 body {
     font-family: 'News Cycle', sans-serif;
-    background-color: #faf3e0;
+    background-color: #ffffff;
+    margin: 0;
 }
 
 img {
@@ -16,7 +17,7 @@ input {
     padding-left: 2vh;;
     font-family: 'News Cycle', sans-serif;
     font-size: 20pt;
-    border-radius: 10px;
+    border-radius: 5px;
     border: none;
     box-shadow:
     0 2.8px 2.2px rgba(0, 0, 0, 0.034),
@@ -34,9 +35,13 @@ input:focus {
 button {
     font-family: 'News Cycle', sans-serif;
     font-size: 20pt;
-    background-color: #eabf9f;
-    border-radius: 10px;
+    background-color: #EB6E4B;
+    border-radius: 5px;
     border: none;
+    color: white;
+    /* border-width: .5px; */
+    /* border: solid; */
+    /* border-color: black; */
     box-shadow:
     0 2.8px 2.2px rgba(0, 0, 0, 0.034),
     0 6.7px 5.3px rgba(0, 0, 0, 0.048),
@@ -55,16 +60,17 @@ button:focus {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 75vh;
+    height: 75%;
 }
 
 #content-div {
     width: 35vh;
     height: 50vh;
-    background-color: #a1cae2;
+    background-color: #236287;
     display: flex;
     align-items: center;
     flex-direction: column;
+    justify-content: space-around;
     border-radius: 10px;
     -webkit-box-shadow: 0 35px 20px #777;
     -moz-box-shadow: 0 35px 20px #777;
@@ -72,12 +78,10 @@ button:focus {
 }
 
 #content-div-top{
-    height: 33vh;
-    width: 25vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 50px;
+    color: white;
 }
 
 #location-name {
@@ -95,8 +99,81 @@ button:focus {
     width: 6vh;
 }
 
-
-#content-div-bottom {
-    margin-top: 75px;
-    margin-bottom: 40px;
+#message {
+    margin-top: 100px;
 }
+
+@media all and (max-height: 1250px){
+    #content-div{
+        width: 38vh;
+        height: 53vh;
+    }
+}
+
+@media all and (max-height: 1150px){
+    #content-div{
+        width: 42vh;
+        height: 57vh;
+    }
+}
+
+@media all and (max-height: 1050px){
+    #content-div{
+        width: 46vh;
+        height: 61vh;
+    }
+}
+
+@media all and (max-height: 950px){
+    #content-div{
+        width: 50vh;
+        height: 65vh;
+    }
+}
+
+@media all and (max-height: 850px){
+    #content-div{
+        width: 55vh;
+        height: 69vh;
+    }
+}
+
+@media all and (max-height: 800px){
+    #content-div{
+        width: 60vh;
+        height: 78vh;
+    }
+    #title{
+        font-size: 22pt;
+    }
+    #location-name {
+        font-size: 32pt;
+    }
+}
+
+@media all and (max-height: 650px){
+    #content-div{
+        width: 65vh;
+        height: 85vh;
+    }
+}
+
+@media all and (max-height: 650px){
+    #content-div{
+        width: 65vh;
+        height: 85vh;
+    }
+    #title{
+        font-size: 18pt;
+    }
+    #location-name {
+        font-size: 28pt;
+    }
+    #temperature {
+        font-size: 30pt;
+    }
+    /* #content-div-bottom {
+        width: 100%;       
+    } */
+}
+
