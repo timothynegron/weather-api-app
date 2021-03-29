@@ -13,8 +13,8 @@ img {
 }
 
 input {
-    margin-left: 1vh;
-    padding-left: 2vh;;
+    margin-left: 15px;
+    padding-left: 15px;;
     font-family: 'News Cycle', sans-serif;
     font-size: 20pt;
     border-radius: 5px;
@@ -39,9 +39,6 @@ button {
     border-radius: 5px;
     border: none;
     color: white;
-    /* border-width: .5px; */
-    /* border: solid; */
-    /* border-color: black; */
     box-shadow:
     0 2.8px 2.2px rgba(0, 0, 0, 0.034),
     0 6.7px 5.3px rgba(0, 0, 0, 0.048),
@@ -55,6 +52,15 @@ button:focus {
     outline: none;
 }
 
+button:hover {
+    cursor: pointer;
+    background-color: #fca68e;
+}
+
+button:active {
+    box-shadow: none;
+}
+
 #app {
     display: flex;
     flex-direction: column;
@@ -64,8 +70,8 @@ button:focus {
 }
 
 #content-div {
-    width: 35vh;
-    height: 50vh;
+    width: 400px;
+    height: 600px;
     background-color: #236287;
     display: flex;
     align-items: center;
@@ -84,6 +90,10 @@ button:focus {
     color: white;
 }
 
+#content-div-bottom {
+    width: 375px;
+}
+
 #location-name {
     font-size: 40pt;
 }
@@ -96,84 +106,31 @@ button:focus {
 #content-div-high-low {
     display: flex;
     justify-content: space-between;
-    width: 6vh;
+    width: 80px
 }
 
 #message {
     margin-top: 100px;
 }
 
-@media all and (max-height: 1250px){
-    #content-div{
-        width: 38vh;
-        height: 53vh;
-    }
-}
-
-@media all and (max-height: 1150px){
-    #content-div{
-        width: 42vh;
-        height: 57vh;
-    }
-}
-
-@media all and (max-height: 1050px){
-    #content-div{
-        width: 46vh;
-        height: 61vh;
-    }
-}
-
-@media all and (max-height: 950px){
-    #content-div{
-        width: 50vh;
-        height: 65vh;
-    }
-}
-
 @media all and (max-height: 850px){
-    #content-div{
-        width: 55vh;
-        height: 69vh;
-    }
-}
-
-@media all and (max-height: 800px){
-    #content-div{
-        width: 60vh;
-        height: 78vh;
-    }
-    #title{
-        font-size: 22pt;
-    }
-    #location-name {
-        font-size: 32pt;
-    }
-}
-
-@media all and (max-height: 650px){
-    #content-div{
-        width: 65vh;
-        height: 85vh;
-    }
-}
-
-@media all and (max-height: 650px){
-    #content-div{
-        width: 65vh;
-        height: 85vh;
-    }
     #title{
         font-size: 18pt;
     }
+    #message {
+        margin-top: 50px;
+    }
+    #content-div {
+        height: 550px;
+    }
     #location-name {
-        font-size: 28pt;
+        font-size: 36pt;
     }
+    
     #temperature {
-        font-size: 30pt;
+        font-size: 36pt;
     }
-    /* #content-div-bottom {
-        width: 100%;       
-    } */
+    img {
+        width: 175px;
+    }
 }
-
