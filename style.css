@@ -134,3 +134,8 @@ button:active {
         width: 175px;
     }
 }
+@media all and (max-width: 500px){
+    #content-div {
+        width: 90%;
+    }
+}
