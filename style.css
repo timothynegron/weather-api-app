@@ -13,7 +13,7 @@ img {
 }
 
 input {
-    margin-left: 15px;
+    /* margin-left: 15px; */
     padding-left: 15px;;
     font-family: 'News Cycle', sans-serif;
     font-size: 20pt;
@@ -71,7 +71,7 @@ button:active {
 
 #content-div {
     width: 400px;
-    height: 600px;
+    height: 700px;
     background-color: #236287;
     display: flex;
     align-items: center;
@@ -85,13 +85,18 @@ button:active {
 
 #content-div-top{
     display: flex;
+    margin-top: -25px;
     flex-direction: column;
     align-items: center;
     color: white;
 }
 
 #content-div-bottom {
-    width: 375px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 125px;
+    width: 70%;
 }
 
 #location-name {
@@ -121,7 +126,7 @@ button:active {
         margin-top: 50px;
     }
     #content-div {
-        height: 550px;
+        height: 600px;
     }
     #location-name {
         font-size: 36pt;
@@ -134,8 +139,12 @@ button:active {
         width: 175px;
     }
 }
-@media all and (max-width: 500px){
+
+@media all and (max-width: 515px){
     #content-div {
         width: 90%;
+    }
+    #content-div-bottom {
+        width: 85%;
     }
 }
