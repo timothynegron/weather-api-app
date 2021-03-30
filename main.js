@@ -46,13 +46,21 @@ function search(){
         setLowTemperature(data["main"]["temp_min"]);
         setWeatherIcon(data["weather"][0]["icon"]);
     })
-    .catch(err => alert("Wrong city name!"))
+    .catch(err => errorMessage())
     document.querySelector("input").value = "";
+}
+
+function errorMessage(){
+    document.querySelector("#description").innerHTML = "Wrong city name"
+    document.querySelector("img").src = "";
+    document.querySelector("#location-name").innerHTML = "";
+    document.querySelector("#temperature").innerHTML = "";
+    document.querySelector("#temperature-high").innerHTML = "";
+    document.querySelector("#temperature-low").innerHTML= "";
 }
 
 function setWeatherDescription(description){
     document.querySelector("#description").innerHTML = description;
-    
 }
 
 function setWeatherIcon(iconCode){
@@ -72,9 +80,12 @@ function setHighTemperature(highTemp){
 }
 
 function setLowTemperature(lowTemp){
-    console.log(lowTemp);
     document.querySelector("#temperature-low").innerHTML= `L:${kelvinToFahrenheit(lowTemp)}°`;
 }
+
+// ┌────────────────────┐
+// │   Math Functions   │	
+// └────────────────────┘
 
 function kelvinToFahrenheit(kelvin){
     return Math.ceil(((kelvin - 273.15) * 9/5 + 32));
